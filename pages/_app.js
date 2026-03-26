@@ -1,5 +1,9 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import '../global.css'
+
+// Load IndigoBot only on client side (uses localStorage + browser APIs)
+const IndigoBot = dynamic(() => import('../components/IndigoBot'), { ssr: false })
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -14,6 +18,7 @@ export default function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />
+      <IndigoBot />
     </>
   )
 }
