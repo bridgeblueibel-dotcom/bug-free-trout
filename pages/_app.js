@@ -23,8 +23,14 @@ export default function MyApp({ Component, pageProps }) {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GT-KT9BDB8L');
-        gtag('config', 'AW-18059698700');
+        gtag('config', 'GT-KT9BDB8L', {
+          linker: { domains: ['online.hablamos247.com'] }
+        });
+        gtag('config', 'AW-18059698700', {
+          linker: { domains: ['online.hablamos247.com'] },
+          allow_enhanced_conversions: true
+        });
+        gtag('set', 'linker', { domains: ['online.hablamos247.com'] });
       `}</Script>
       <Component {...pageProps} />
     </>
