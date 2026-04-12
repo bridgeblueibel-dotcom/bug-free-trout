@@ -21,8 +21,29 @@ export default function Profesionales() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
+    const fd = new FormData(event.target)
+    try {
+      await fetch('/api/brevo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          tipo: 'profesional',
+          nombre: fd.get('nombre'),
+          email: fd.get('email'),
+          telefono: fd.get('telefono'),
+          especialidad: fd.get('especialidad'),
+          ciudad: fd.get('ciudad'),
+          experiencia: fd.get('experiencia'),
+          disponibilidad: fd.get('disponibilidad'),
+          modalidad: fd.get('modalidad'),
+          mensaje: fd.get('mensaje'),
+        }),
+      })
+    } catch (e) {
+      console.error('Brevo submit error:', e)
+    }
     setSubmitted(true)
   }
 

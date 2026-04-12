@@ -22,8 +22,29 @@ export default function Reservar() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
+    const fd = new FormData(event.target)
+    try {
+      await fetch('/api/brevo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          tipo: 'reserva',
+          nombre: fd.get('nombre'),
+          telefono: fd.get('telefono'),
+          email: fd.get('email'),
+          servicio: fd.get('servicio'),
+          fecha: fd.get('fecha'),
+          hora: fd.get('hora'),
+          modalidad: fd.get('modalidad'),
+          direccion: fd.get('direccion'),
+          notas: fd.get('notas'),
+        }),
+      })
+    } catch (e) {
+      console.error('Brevo submit error:', e)
+    }
     setSubmitted(true)
   }
 
