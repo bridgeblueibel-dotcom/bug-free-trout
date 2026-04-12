@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Blue 24/7 · hablamos247.com</title>
+        <title>Desert Call · hablamos247.com</title>
         <meta name="description" content="Plataforma logística estética 05:00–01:00. Profesionales verificados en hotel, domicilio o centro. Pago seguro Stripe." />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet" />
       </Head>
@@ -330,7 +330,7 @@ export default function Home() {
       `}</style>
       {/* ── NAV ── */}
       <nav>
-        <img src="YOUR_LOGO_URL" alt="Blue 24/7" />
+        <img src="YOUR_LOGO_URL" alt="Desert Call" />
         <div className="nav-links" style={{display:'flex',gap:30}}>
           <a href="#profesionales">Profesionales</a>
           <a href="#hoteles">Hoteles</a>
@@ -341,7 +341,7 @@ export default function Home() {
       </nav>
       {/* ── HERO ── */}
       <div className="hero fade-up">
-        <img className="logo" src="YOUR_LOGO_URL" alt="Blue 24/7" />
+        <img className="logo" src="YOUR_LOGO_URL" alt="Desert Call" />
         <h1>La plataforma que llena tu agenda<br /><span>cuando todos están cerrados.</span></h1>
         <p>Logística completa para servicios de estética fuera de horario.<br />Disponibilidad 05:00–01:00 · Sin cuotas · Solo comisión.</p>
         <div className="badge-row">
@@ -419,7 +419,7 @@ export default function Home() {
           </div>
         </div>
         <div style={{textAlign:'center',marginTop:50}}>
-          <a className="btn-outline" href="tel:+34614067291">Integrar Blue 24/7 en mi hotel</a>
+          <a className="btn-outline" href="tel:+34614067291">Integrar Desert Call en mi hotel</a>
         </div>
       </section>
       <div className="divider" />
@@ -496,14 +496,14 @@ export default function Home() {
       <div className="divider" />
       {/* ── CTA FINAL ── */}
       <div className="cta-band fade-up">
-        <img src="YOUR_LOGO_URL" alt="Blue 24/7" style={{height:100,marginBottom:30,filter:'drop-shadow(0 0 20px rgba(212,175,55,0.4))'}} />
+        <img src="YOUR_LOGO_URL" alt="Desert Call" style={{height:100,marginBottom:30,filter:'drop-shadow(0 0 20px rgba(212,175,55,0.4))'}} />
         <h2>Listo para activar tus ingresos?</h2>
         <p style={{color:'rgba(255,255,255,0.6)',margin:'16px auto 40px auto',maxWidth:500}}>Sin cuotas. Sin riesgos. Sin excusas.</p>
         <a className="btn-gold" href="https://buy.stripe.com/fZu14p5DX9JE2wCf7CcEw01">Activar cuenta ahora</a>
       </div>
       {/* ── FOOTER ── */}
       <footer id="contacto">
-        <img src="YOUR_LOGO_URL" alt="Blue 24/7" />
+        <img src="YOUR_LOGO_URL" alt="Desert Call" />
         <p>
           <a href="mailto:contacto@hablamos247.es">contacto@hablamos247.es</a><br />
           <a href="tel:+34614067291">+34 614 067 291</a><br />

@@ -51,7 +51,7 @@ export default function Reservar() {
   return (
     <>
       <Head>
-        <title>Blue 24/7 · Reservar Servicio</title>
+        <title>Desert Call · Reservar Servicio</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet" />
       </Head>
       <Script src="https://js.stripe.com/v3/buy-button.js" />
@@ -412,7 +412,7 @@ export default function Reservar() {
       `}</style>
 
       <nav>
-        <img src="YOUR_LOGO_URL" alt="Blue 24/7" />
+        <img src="YOUR_LOGO_URL" alt="Desert Call" />
         <div className="nav-links" style={{display:'flex',gap:30}}>
           <a href="#servicios" style={{color:'#D4AF37',textDecoration:'none',fontWeight:700,fontSize:14}}>Servicios</a>
           <a href="#reservar" style={{color:'#D4AF37',textDecoration:'none',fontWeight:700,fontSize:14}}>Reservar</a>
@@ -421,7 +421,7 @@ export default function Reservar() {
       </nav>
 
       <div className="hero fade-up">
-        <img className="logo" src="YOUR_LOGO_URL" alt="Blue 24/7" />
+        <img className="logo" src="YOUR_LOGO_URL" alt="Desert Call" />
         <h1>Belleza y bienestar<br /><span>donde estés. Cuando lo necesitas.</span></h1>
         <p>Profesionales verificados en tu hotel, domicilio o centro. Disponible de 05:00 a 01:00. Pago seguro y financiación Klarna.</p>
         <div className="badge-row">
@@ -593,7 +593,7 @@ export default function Reservar() {
       </div>
 
       <footer>
-        <img src="YOUR_LOGO_URL" alt="Blue 24/7" />
+        <img src="YOUR_LOGO_URL" alt="Desert Call" />
         <p>
           <a href="mailto:contacto@hablamos247.es">contacto@hablamos247.es</a><br />
           <a href="tel:+34614067291">+34 614 067 291</a><br />

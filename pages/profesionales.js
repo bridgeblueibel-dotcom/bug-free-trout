@@ -50,7 +50,7 @@ export default function Profesionales() {
   return (
     <>
       <Head>
-        <title>Blue 24/7 · Registro Profesionales</title>
+        <title>Desert Call · Registro Profesionales</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet" />
       </Head>
 
@@ -403,7 +403,7 @@ export default function Profesionales() {
       `}</style>
 
       <nav>
-        <img src="YOUR_LOGO_URL" alt="Blue 24/7" />
+        <img src="YOUR_LOGO_URL" alt="Desert Call" />
         <div className="nav-links" style={{display:'flex',gap:30}}>
           <a href="#beneficios">Beneficios</a>
           <a href="#como-funciona">Cómo funciona</a>
@@ -413,9 +413,9 @@ export default function Profesionales() {
       </nav>
 
       <div className="hero fade-up">
-        <img className="logo" src="YOUR_LOGO_URL" alt="Blue 24/7" />
+        <img className="logo" src="YOUR_LOGO_URL" alt="Desert Call" />
         <h1>Más clientes.<br /><span>Sin cuotas. Sin riesgos.</span></h1>
-        <p>Únete a Blue 24/7 y empieza a recibir reservas en horario ampliado. Solo comisión por servicio realizado.</p>
+        <p>Únete a Desert Call y empieza a recibir reservas en horario ampliado. Solo comisión por servicio realizado.</p>
         <div className="badge-row">
           <span className="badge">Sin cuotas mensuales</span>
           <span className="badge">Solo comisión</span>
@@ -429,7 +429,7 @@ export default function Profesionales() {
       <div className="divider" />
 
       <section id="beneficios" className="section fade-up">
-        <h2>Qué obtienes como <span>profesional Blue 24/7</span></h2>
+        <h2>Qué obtienes como <span>profesional Desert Call</span></h2>
         <p className="section-sub">Una plataforma que trabaja por ti mientras tú te dedicas a tu oficio.</p>
         <div className="grid">
           <div className="card">
@@ -473,7 +473,7 @@ export default function Profesionales() {
         <div className="grid">
           <div className="card" style={{textAlign:'center'}}>
             <div style={{width:48,height:48,background:'linear-gradient(135deg,#D4AF37,#F5D87A)',color:'#0B0E1F',fontWeight:900,fontSize:20,borderRadius:50,display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 16px auto'}}>1</div>
-            <p>Te registras en Blue 24/7</p>
+            <p>Te registras en Desert Call</p>
           </div>
           <div className="card" style={{textAlign:'center'}}>
             <div style={{width:48,height:48,background:'linear-gradient(135deg,#D4AF37,#F5D87A)',color:'#0B0E1F',fontWeight:900,fontSize:20,borderRadius:50,display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 16px auto'}}>2</div>
@@ -511,7 +511,7 @@ export default function Profesionales() {
             </div>
           ) : (
             <div id="form-content">
-              <h3>Registro <span>Blue 24/7</span></h3>
+              <h3>Registro <span>Desert Call</span></h3>
               <p className="form-sub">Sin compromiso · Sin cuotas · Activación inmediata</p>
 
               <form id="pro-form" onSubmit={handleSubmit}>
@@ -606,14 +606,14 @@ export default function Profesionales() {
       <div className="divider" />
 
       <div className="cta-band fade-up">
-        <img src="YOUR_LOGO_URL" alt="Blue 24/7" style={{height:90,marginBottom:30,filter:'drop-shadow(0 0 20px rgba(212,175,55,0.4))'}} />
+        <img src="YOUR_LOGO_URL" alt="Desert Call" style={{height:90,marginBottom:30,filter:'drop-shadow(0 0 20px rgba(212,175,55,0.4))'}} />
         <h2>¿Tienes dudas antes de registrarte?</h2>
         <p style={{color:'rgba(255,255,255,0.6)',margin:'16px auto 40px auto',maxWidth:500,fontSize:17}}>Escríbenos o llámanos. Te respondemos en minutos.</p>
         <a className="btn-gold" href="tel:+34614067291">+34 614 067 291</a>
       </div>
 
       <footer>
-        <img src="YOUR_LOGO_URL" alt="Blue 24/7" />
+        <img src="YOUR_LOGO_URL" alt="Desert Call" />
         <p>
           <a href="mailto:contacto@hablamos247.es">contacto@hablamos247.es</a><br />
           <a href="tel:+34614067291">+34 614 067 291</a><br />
