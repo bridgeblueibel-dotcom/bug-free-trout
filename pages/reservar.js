@@ -45,6 +45,11 @@ export default function Reservar() {
     } catch (e) {
       console.error('Brevo submit error:', e)
     }
+    // Google Ads conversion — reserva de servicio
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', { send_to: 'AW-18059698700' })
+      window.gtag('event', 'generate_lead', { currency: 'EUR' })
+    }
     setSubmitted(true)
   }
 

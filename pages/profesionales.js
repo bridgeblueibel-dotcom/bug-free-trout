@@ -44,6 +44,11 @@ export default function Profesionales() {
     } catch (e) {
       console.error('Brevo submit error:', e)
     }
+    // Google Ads conversion — registro profesional
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', { send_to: 'AW-18059698700' })
+      window.gtag('event', 'sign_up', { method: 'profesional_form' })
+    }
     setSubmitted(true)
   }
 

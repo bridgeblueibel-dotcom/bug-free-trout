@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import '../global.css'
 
 export default function MyApp({ Component, pageProps }) {
@@ -13,7 +14,20 @@ export default function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
+      {/* Google Tag — GT-KT9BDB8L + Google Ads AW-18059698700 */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=GT-KT9BDB8L"
+        strategy="afterInteractive"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GT-KT9BDB8L');
+        gtag('config', 'AW-18059698700');
+      `}</Script>
       <Component {...pageProps} />
     </>
   )
 }
+
