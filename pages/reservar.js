@@ -595,12 +595,11 @@ export default function Reservar() {
       <footer>
         <img src="YOUR_LOGO_URL" alt="Blue 24/7" />
         <p>
-          <a href="mailto:ibel.liria@mail.com">ibel.liria@mail.com</a><br />
-          <a href="mailto:info.blue@mail.com">info.blue@mail.com</a><br />
+          <a href="mailto:contacto@hablamos247.es">contacto@hablamos247.es</a><br />
           <a href="tel:+34614067291">+34 614 067 291</a><br />
           Las Palmas de Gran Canaria
         </p>
-        <p style={{marginTop:30,fontSize:12}}>© 2025 IL Bridge Blue World S.L. · CIF B24909517</p>
+        <p style={{marginTop:30,fontSize:12}}>© 2025 IL Bridge Blue World S.L. · CIF B24909517 · hablamos247.com</p>
       </footer>
 
       <div className="mobile-bar">
