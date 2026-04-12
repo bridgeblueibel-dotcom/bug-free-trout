@@ -51,6 +51,9 @@ export default function Profesionales() {
     <>
       <Head>
         <title>Desert Call · Registro Profesionales</title>
+        <meta name="description" content="Únete a Desert Call como profesional. Sin cuotas. Solo comisión. Recibe clientes en horario ampliado 05:00–01:00." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://online.hablamos247.com/profesionales" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet" />
       </Head>
 
@@ -619,7 +622,7 @@ export default function Profesionales() {
           <a href="tel:+34614067291">+34 614 067 291</a><br />
           Las Palmas de Gran Canaria
         </p>
-        <p style={{marginTop:30,fontSize:12}}>© 2025 IL Bridge Blue World S.L. · CIF B24909517 · hablamos247.com</p>
+        <p style={{marginTop:30,fontSize:12}}>© 2025 IL Bridge Blue World S.L. · CIF B24909517 · online.hablamos247.com</p>
       </footer>
 
       <div className="mobile-bar">

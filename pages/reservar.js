@@ -52,6 +52,9 @@ export default function Reservar() {
     <>
       <Head>
         <title>Desert Call · Reservar Servicio</title>
+        <meta name="description" content="Reserva tu servicio de belleza y bienestar a domicilio u hotel. Disponible 05:00–01:00. Profesionales verificados." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://online.hablamos247.com/reservar" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet" />
       </Head>
       <Script src="https://js.stripe.com/v3/buy-button.js" />
@@ -599,7 +602,7 @@ export default function Reservar() {
           <a href="tel:+34614067291">+34 614 067 291</a><br />
           Las Palmas de Gran Canaria
         </p>
-        <p style={{marginTop:30,fontSize:12}}>© 2025 IL Bridge Blue World S.L. · CIF B24909517 · hablamos247.com</p>
+        <p style={{marginTop:30,fontSize:12}}>© 2025 IL Bridge Blue World S.L. · CIF B24909517 · online.hablamos247.com</p>
       </footer>
 
       <div className="mobile-bar">
