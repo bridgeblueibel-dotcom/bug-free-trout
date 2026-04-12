@@ -23,10 +23,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Desert Call · online.online.hablamos247.com</title>
+        <title>Desert Call · online.hablamos247.com</title>
         <meta name="description" content="Plataforma logística estética 05:00–01:00. Profesionales verificados en hotel, domicilio o centro. Pago seguro Stripe." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://online.online.hablamos247.com" />
+        <link rel="canonical" href="https://online.hablamos247.com" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet" />
       </Head>
       <Script src="https://js.stripe.com/v3/buy-button.js" />
