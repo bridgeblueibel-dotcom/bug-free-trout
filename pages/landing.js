@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 // ── CONFIGURACIÓN HUBSPOT ──────────────────────────────────────
 const HUBSPOT_PORTAL_ID = '147481031'
-const HUBSPOT_FORM_ID   = 'TU_FORM_ID_AQUI' // reemplaza con tu Form ID
+const HUBSPOT_FORM_ID   = 'eu1-6668-3744-4a6f-8874-88004b125c99'
 // ──────────────────────────────────────────────────────────────
 
 export default function Landing() {
