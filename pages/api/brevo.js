@@ -1,6 +1,7 @@
 // List IDs in ClickUp
 const CLICKUP_LIST_RESERVAS      = '901522622834' // 📥 ENTRADA — Nuevas Solicitudes del Día (Desert Call)
 const CLICKUP_LIST_PROFESIONALES = '901522587806' // 🔴 01 — NUEVO PROFESIONAL (CRM Profesionales)
+const CLICKUP_LIST_CONTACTO      = '901522587814' // 📥 ENTRADA — Nuevas Solicitudes del Día (Bridge Blue)
 
 const PIPEDRIVE_BASE = 'https://api.pipedrive.com/v1'
 
@@ -137,6 +138,20 @@ export default async function handler(req, res) {
 
     pipedriveNote      = clickupDesc
     pipedriveDealTitle = `Reserva: ${rest.servicio || 'Servicio'} — ${rest.fecha || ''} ${rest.hora || ''}`
+
+  } else if (tipo === 'contacto') {
+    attributes.MENSAJE = rest.mensaje || ''
+
+    clickupListId  = CLICKUP_LIST_CONTACTO
+    clickupTitle   = `✉️ Contacto: ${nombre || email}`
+    clickupDesc    = [
+      `Email: ${email}`,
+      `Teléfono: ${telefono || '—'}`,
+      `Mensaje: ${rest.mensaje || '—'}`,
+    ].join('\n')
+
+    pipedriveNote      = clickupDesc
+    pipedriveDealTitle = `Contacto: ${nombre || email}`
   }
 
   // ── Brevo ──────────────────────────────────────────────────────

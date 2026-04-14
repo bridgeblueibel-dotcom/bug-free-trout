@@ -1,8 +1,35 @@
 import Head from 'next/head'
 import Script from 'next/script'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [contactSent, setContactSent] = useState(false)
+
+  const handleContact = async (e) => {
+    e.preventDefault()
+    const fd = new FormData(e.target)
+    try {
+      await fetch('/api/brevo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          tipo: 'contacto',
+          nombre: fd.get('nombre'),
+          email: fd.get('email'),
+          telefono: fd.get('telefono'),
+          mensaje: fd.get('mensaje'),
+        }),
+      })
+    } catch (err) {
+      console.error('Contact submit error:', err)
+    }
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', { send_to: 'AW-18059698700' })
+      window.gtag('event', 'contact', {})
+    }
+    setContactSent(true)
+  }
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -503,8 +530,24 @@ export default function Home() {
         <p style={{color:'rgba(255,255,255,0.6)',margin:'16px auto 40px auto',maxWidth:500}}>Sin cuotas. Sin riesgos. Sin excusas.</p>
         <a className="btn-gold" href="https://buy.stripe.com/fZu14p5DX9JE2wCf7CcEw01">Activar cuenta ahora</a>
       </div>
+      {/* ── CONTACTO ── */}
+      <section id="contacto" style={{padding:'80px 24px',maxWidth:560,margin:'0 auto'}}>
+        <h2 className="fade-up" style={{textAlign:'center',fontSize:'clamp(1.6rem,4vw,2.4rem)',marginBottom:12}}>¿Tienes alguna pregunta?</h2>
+        <p className="fade-up" style={{textAlign:'center',color:'rgba(255,255,255,0.55)',marginBottom:40}}>Escríbenos y te respondemos en menos de 24 h.</p>
+        {contactSent ? (
+          <p className="fade-up" style={{textAlign:'center',color:'#D4AF37',fontSize:'1.1rem'}}>✓ Mensaje recibido. Te contactamos pronto.</p>
+        ) : (
+          <form className="fade-up" onSubmit={handleContact} style={{display:'flex',flexDirection:'column',gap:14}}>
+            <input name="nombre" placeholder="Tu nombre" required style={{padding:'14px 18px',background:'rgba(255,255,255,0.06)',border:'1px solid rgba(212,175,55,0.3)',borderRadius:10,color:'#fff',fontSize:'0.95rem'}} />
+            <input name="email" type="email" placeholder="Email" required style={{padding:'14px 18px',background:'rgba(255,255,255,0.06)',border:'1px solid rgba(212,175,55,0.3)',borderRadius:10,color:'#fff',fontSize:'0.95rem'}} />
+            <input name="telefono" placeholder="Teléfono (opcional)" style={{padding:'14px 18px',background:'rgba(255,255,255,0.06)',border:'1px solid rgba(212,175,55,0.3)',borderRadius:10,color:'#fff',fontSize:'0.95rem'}} />
+            <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" rows={4} required style={{padding:'14px 18px',background:'rgba(255,255,255,0.06)',border:'1px solid rgba(212,175,55,0.3)',borderRadius:10,color:'#fff',fontSize:'0.95rem',resize:'vertical'}} />
+            <button type="submit" style={{padding:'16px',background:'#D4AF37',color:'#0B0E1F',fontWeight:700,fontSize:'1rem',borderRadius:10,border:'none',cursor:'pointer'}}>Enviar mensaje</button>
+          </form>
+        )}
+      </section>
       {/* ── FOOTER ── */}
-      <footer id="contacto">
+      <footer>
         <img src="YOUR_LOGO_URL" alt="Desert Call" />
         <p>
           <a href="mailto:contacto@hablamos247.es">contacto@hablamos247.es</a><br />
