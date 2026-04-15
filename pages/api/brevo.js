@@ -2,6 +2,7 @@
 const CLICKUP_LIST_RESERVAS      = '901522622834' // 📥 ENTRADA — Nuevas Solicitudes del Día (Desert Call)
 const CLICKUP_LIST_PROFESIONALES = '901522587806' // 🔴 01 — NUEVO PROFESIONAL (CRM Profesionales)
 const CLICKUP_LIST_CONTACTO      = '901522587814' // 📥 ENTRADA — Nuevas Solicitudes del Día (Bridge Blue)
+const CLICKUP_LIST_TELEFONISTAS  = '901522587582' // 🎙️ CRM Voces Amigas — Captación & Onboarding
 
 const PIPEDRIVE_BASE = 'https://api.pipedrive.com/v1'
 
@@ -152,6 +153,22 @@ export default async function handler(req, res) {
 
     pipedriveNote      = clickupDesc
     pipedriveDealTitle = `Contacto: ${nombre || email}`
+
+  } else if (tipo === 'telefonista') {
+    attributes.DISPONIBILIDAD = rest.disponibilidad || ''
+    attributes.MENSAJE        = rest.mensaje || ''
+
+    clickupListId  = CLICKUP_LIST_TELEFONISTAS
+    clickupTitle   = `🎙️ Nueva Voz Amiga: ${nombre || email}`
+    clickupDesc    = [
+      `Email: ${email}`,
+      `Teléfono: ${telefono || '—'}`,
+      `Disponibilidad: ${rest.disponibilidad || '—'}`,
+      `Por qué quiere unirse: ${rest.mensaje || '—'}`,
+    ].join('\n')
+
+    pipedriveNote      = clickupDesc
+    pipedriveDealTitle = `Voz Amiga: ${nombre || email}`
   }
 
   // ── Brevo ──────────────────────────────────────────────────────
